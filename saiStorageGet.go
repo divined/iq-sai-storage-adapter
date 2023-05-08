@@ -8,7 +8,7 @@ import (
 type SaiStorageGetRequest struct {
 	Collection string      `json:"collection"`
 	Select     interface{} `json:"select"`
-	Config     interface{} `json:"config"`
+	Config     interface{} `json:"options"`
 }
 
 type SaiStorageGetResponse struct {
