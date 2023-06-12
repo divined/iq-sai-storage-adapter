@@ -6,13 +6,15 @@ import (
 )
 
 type SaiStorageGetRequest struct {
-	Collection string      `json:"collection"`
-	Select     interface{} `json:"select"`
-	Config     interface{} `json:"options"`
+	Collection    string      `json:"collection"`
+	Select        interface{} `json:"select"`
+	Options       interface{} `json:"options"`
+	IncludeFields []string    `json:"include_fields,omitempty"`
 }
 
 type SaiStorageGetResponse struct {
-	Result []interface{} `json:"result"`
+	Result []map[string]interface{} `json:"result,omitempty"`
+	Count  int                      `json:"count,omitempty"`
 }
 
 func (saiStorage *SaiStorage) Get(request SaiStorageGetRequest) (*SaiStorageGetResponse, error) {
