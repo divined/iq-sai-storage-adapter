@@ -25,6 +25,7 @@ type SaiStorageRemoveRequest struct {
 
 type SaiStorageChangeResponse struct {
 	Status string `json:"Status"`
+	Result string `json:"Result"`
 }
 
 func (saiStorage *SaiStorage) Save(request SaiStorageSaveRequest) (*SaiStorageChangeResponse, error) {
