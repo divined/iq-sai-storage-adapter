@@ -13,7 +13,7 @@ type SaiStorageGetRequest struct {
 }
 
 type SaiStorageGetResponse struct {
-	Result []map[string]interface{} `json:"result,omitempty"`
+	Result []map[string]interface{} `json:"result"`
 	Count  int                      `json:"count,omitempty"`
 }
 
