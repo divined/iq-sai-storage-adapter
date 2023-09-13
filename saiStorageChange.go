@@ -8,12 +8,14 @@ import (
 type SaiStorageSaveRequest struct {
 	Collection string      `json:"collection"`
 	Data       interface{} `json:"data"`
+	Options    interface{} `json:"options,omitempty"`
 }
 
 type SaiStorageUpdateRequest struct {
 	Collection string      `json:"collection"`
 	Select     interface{} `json:"select"`
 	Data       interface{} `json:"data"`
+	Options    interface{} `json:"options,omitempty"`
 }
 
 type SaiStorageUpsertRequest = SaiStorageUpdateRequest
@@ -21,6 +23,7 @@ type SaiStorageUpsertRequest = SaiStorageUpdateRequest
 type SaiStorageRemoveRequest struct {
 	Collection string      `json:"collection"`
 	Select     interface{} `json:"select"`
+	Options    interface{} `json:"options,omitempty"`
 }
 
 type SaiStorageChangeResponse struct {
