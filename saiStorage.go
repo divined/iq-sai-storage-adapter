@@ -16,7 +16,7 @@ func (s *SaiStorage) makeRequest(method string, requestBody []byte) (*http.Respo
 	url := s.Url + "/" + method
 
 	//println(requestBody)
-	println(string(requestBody))
+	// println(string(requestBody))
 
 	// Create a new POST request with the request body
 	req, err := http.NewRequest("POST", url, bytes.NewBuffer(requestBody))
